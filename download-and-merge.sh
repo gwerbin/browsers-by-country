@@ -21,5 +21,5 @@ for year in $(seq -s ' ' 2008 2015); do
   done
 done
 
-cat data/*-withdate.csv | sed '1!{/^"Year"/d;}' >| data/browsers.csv
+cat data/*-withdate.csv | sed '1!{/^"Year"/d;}' >| shinyapp/browsers.csv
 

@@ -5,7 +5,7 @@ library(rworldmap)
 library(RColorBrewer)
 rowselect <- dplyr::filter
 
-browsers <- read.csv('data/browsers.csv', stringsAsFactors = FALSE) %>%
+browsers <- read.csv('browsers.csv', stringsAsFactors = FALSE) %>%
   gather('Country', 'Fraction', -Year, -Month, -Browser) %>%
   mutate(DateRange = Year)
 for (year in unique(browsers$Year)) {
