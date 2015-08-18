@@ -9,6 +9,6 @@ shinyUI(pageWithSidebar(
     textOutput("date_display")
   ),
   mainPanel(
-    plotOutput("map", height = '425px')
+    plotOutput("map", height = '450px')
   )
 ))
