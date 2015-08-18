@@ -5,6 +5,12 @@ library(rworldmap)
 library(RColorBrewer)
 rowselect <- dplyr::filter
 
+reorder_freq <- function(x, biggest_first = TRUE) {
+  if (biggest_first)
+    reorder(x, x, `-` %of% length)
+  else reorder(x, x, length)
+}
+
 browsers <- read.csv('browsers.csv', stringsAsFactors = FALSE) %>%
   gather('Country', 'Fraction', -Year, -Month, -Browser) %>%
   mutate(DateRange = Year)
