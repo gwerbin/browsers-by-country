@@ -1,5 +1,5 @@
 library(shiny)
-source("https://raw.githubusercontent.com/gwerbin/browsers-by-country/master/browsers.R")
+source("browsers.R")
 
 shinyServer(function(input, output) {
   date_range <- reactive({
