@@ -7,7 +7,7 @@ rowselect <- dplyr::filter
 
 reorder_freq <- function(x, biggest_first = TRUE) {
   if (biggest_first)
-    reorder(x, x, `-` %of% length)
+    reorder(x, x, function(x) -length(x))
   else reorder(x, x, length)
 }
 
